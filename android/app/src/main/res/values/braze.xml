@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="com_braze_api_key">53e7b03a-2bcb-40dc-974e-ee361b6517bf</string>
+    <string translatable="false" name="com_braze_custom_endpoint">sondheim.braze.com</string>
+    <string name="com_braze_flutter_automatic_integration_iam_operation">DISCARD</string>
+    <integer name="com_braze_trigger_action_minimum_time_interval_seconds">1</integer>
+    <bool name="com_braze_firebase_cloud_messaging_registration_enabled">true</bool>
+    <string translatable="false" name="com_braze_firebase_cloud_messaging_sender_id">665479848171</string>
+    <bool name="com_braze_handle_push_deep_links_automatically">true</bool>
+</resources>

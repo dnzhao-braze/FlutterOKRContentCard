@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "665479848171",
+    "project_id": "danni-flutter-android",
+    "storage_bucket": "danni-flutter-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:665479848171:android:a79f9ab99c0b8761319eae",
+        "android_client_info": {
+          "package_name": "com.example.flutter2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "665479848171-dhih2tjdccpr6itsn2ihi7ti3bfcm5ok.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdRsEuMZ1TjNfcLXNW-GSeuO-9gipO24A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "665479848171-dhih2tjdccpr6itsn2ihi7ti3bfcm5ok.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
