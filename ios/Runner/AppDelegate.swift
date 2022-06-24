@@ -17,6 +17,9 @@ import braze_plugin
                  withAppboyOptions: [ABKMinimumTriggerTimeIntervalKey : 1]) //1 sec interval between IAM
     Appboy.sharedInstance()!.inAppMessageController.delegate = self
 
+    NotificationCenter.default.addObserver(self, selector: #selector(contentCardsUpdated),
+    name:NSNotification.Name.ABKContentCardsProcessed, object: nil)
+
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
 
@@ -31,5 +34,16 @@ import braze_plugin
     //return ABKInAppMessageDisplayChoice.displayInAppMessageNow
     return ABKInAppMessageDisplayChoice.discardInAppMessage
   }
+
+    @objc private func contentCardsUpdated(_ notification: Notification) {
+      if let updateIsSuccessful = notification.userInfo?[ABKContentCardsProcessedIsSuccessfulKey] as? Bool {
+        if (updateIsSuccessful) {
+          let contentCards = Appboy.sharedInstance()?.contentCardsController.contentCards.compactMap { $0 as? ABKContentCard }
+
+          // Pass in-app data to the Flutter layer.
+          BrazePlugin.processContentCards(contentCards)
+        }
+      }
+    }
 
 }

@@ -61,6 +61,8 @@
         <array>
         <string>open.my.app</string>
         <string>open.my.app.too</string>
+        <string>open.my.app.offer</string>
+        <string>open.my.app.offer2</string>
         </array>
         <key>CFBundleURLSchemes</key>
         <array>
