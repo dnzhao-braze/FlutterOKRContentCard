@@ -1,11 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:braze_plugin/braze_plugin.dart';
-import 'home.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class CardsScreen extends StatefulWidget {
-  static const String id = 'cards';
   const CardsScreen({Key? key}) : super(key: key);
 
   @override
@@ -15,15 +13,7 @@ class CardsScreen extends StatefulWidget {
 class _CardsScreenState extends State<CardsScreen> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Welcome to Flutter',
-        theme: ThemeData(
-          primarySwatch: Colors.blueGrey,
-        ),
-        home: const BrazeFunctions(),
-        routes: {
-          HomeScreen.id: (context) => const HomeScreen(),
-        });
+    return const BrazeFunctions();
   }
 }
 
@@ -139,7 +129,7 @@ class BrazeFunctionsState extends State<BrazeFunctions> {
         ),
       );
       for (var contentCard in contentCards) {
-        print(contentCard.toString());
+        //print(contentCard.toString());
         _braze.logContentCardImpression(contentCard);
         cards.add(
           Card(

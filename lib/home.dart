@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'cards.dart';
 import 'package:braze_plugin/braze_plugin.dart';
 
 class HomeScreen extends StatefulWidget {
-  static const String id = 'home';
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
@@ -13,15 +11,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Welcome to Flutter',
-        theme: ThemeData(
-          primarySwatch: Colors.blueGrey,
-        ),
-        home: const BrazeFunctions(),
-        routes: {
-          CardsScreen.id: (context) => const CardsScreen(),
-        });
+    return const BrazeFunctions();
   }
 }
 
@@ -81,7 +71,7 @@ class BrazeFunctionsState extends State<BrazeFunctions> {
           IconButton(
             icon: const Icon(Icons.notifications),
             onPressed: () {
-              Navigator.pushNamed(context, CardsScreen.id);
+              Navigator.pushNamed(context, '/cards');
             },
           )
         ],
@@ -380,7 +370,7 @@ class BrazeFunctionsState extends State<BrazeFunctions> {
 
   void _customIAM() {
     _braze.setBrazeInAppMessageCallback((BrazeInAppMessage inAppMessage) {
-      print(inAppMessage.toString());
+      //print(inAppMessage.toString());
       String imageUrl =
           'https://cdn-staging.braze.com/appboy/communication/assets/image_assets/images/6201de5da7b6d17c2611e033/original.png';
       String button1 = 'Cancel';
